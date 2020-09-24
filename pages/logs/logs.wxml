@@ -1,0 +1,7 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log" wx:key="index">
+    <text class="log-item" bindtap="subscribeMsg">{{index + 1}}. {{log}}</text>
+  </block>
+  <!-- <web-view src="https://www.extfans.com/"></web-view> -->
+</view>

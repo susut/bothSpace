@@ -1,0 +1,18 @@
+<!--pages/cart/cart.wxml-->
+<view class="page-cart-wrap">
+    <view class="goods__item" wx:for="{{cartList}}" wx:key="id">
+        <view class="goods__img">
+            <image src="{{'../../assets/image/' + item.imgName}}" alt=""></image>
+        </view>
+        <view class="goods__detail">
+            <view class="goods__title">
+                {{item.title}}
+                <text class="goods__num">x{{item.buyNum}}</text>
+            </view>
+            <view class="goods__desc">{{item.desc}}</view>
+            <view class="goods__bottom">
+                <view class="goods__amount">￥{{item.amount}}</view>
+            </view>
+        </view>
+    </view>
+</view>
