@@ -3,19 +3,9 @@ const util = require('../../utils/util.js')
 
 Page({
   data: {
-    logs: [],
-    test: {
-      test: 1
-    }
+    logs: []
   },
   onLoad: function () {
-    console.log(this.data.test.test)
-    setTimeout(() => {
-      this.setData({
-        'test.test': 2
-      })
-      console.log(this.data.test.test)
-    }, 2000)
     this.setData({
       logs: (wx.getStorageSync('logs') || []).map(log => {
         return util.formatTime(new Date(log))
