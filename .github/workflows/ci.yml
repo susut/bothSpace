@@ -1,0 +1,19 @@
+name: CD Demo
+on:
+  push:
+    branches:
+      - test-cd
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    
+    - name: Use Node
+      uses: actions/setup-node@master
+
+    - name: Build an Deploy
+      run: |
+        yarn
+        node ci.js
