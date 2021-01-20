@@ -6,6 +6,7 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": true,
@@ -23,8 +24,7 @@
 			"outputPath": ""
 		},
 		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"enhance": true
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
