@@ -13,7 +13,12 @@ jobs:
     - name: Use Node
       uses: actions/setup-node@master
 
-    - name: Build an Deploy
+    - name: Generate provate key
+      run: echo "$UPLOAD_PRIVATE_KEY" > private.key
+      env:
+        UPLOAD_PRIVATE_KEY: ${{ secrets.UPLOAD_PRIVATE_KEY }}
+    
+    - name: Build an Deploy   
       run: |
         yarn
-        node ci.js
+        node ci.js --pkp=./private.key 
