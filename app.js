@@ -34,7 +34,7 @@ App({
       }
     })
 
-    console.log(config.env)
+    console.log(config.env, config.version)
   },
   globalData: {
     userInfo: null,
