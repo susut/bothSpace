@@ -9,16 +9,20 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    
+
     - name: Use Node
       uses: actions/setup-node@master
-
+    # 使用GitHub的Secrets来存储私钥内容，然后在执行时再创建私钥文件。
     - name: Generate provate key
       run: echo "$UPLOAD_PRIVATE_KEY" > private.key
       env:
         UPLOAD_PRIVATE_KEY: ${{ secrets.UPLOAD_PRIVATE_KEY }}
-    
-    - name: Build an Deploy   
+
+    - name: Change ENV
+      if: github.head.ref == 'test-cd'
+      run: sed -i '' "s/\'test\'/\'prod\'/g" utils/config.js
+
+    - name: Build an Deploy
       run: |
-        yarn
-        node ci.js --pkp=./private.key 
+        npx yarn
+        node ci.js --pkp=./private.key

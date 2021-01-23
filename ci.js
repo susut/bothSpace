@@ -16,6 +16,7 @@ const project = new ci.Project({
     ignores: ['./node_modules/**/*'],
 })
 
+// 上传代码
 async function upload() {
     await ci.upload({
         project,

@@ -1,3 +1,4 @@
+import config from './utils/config.js'
 //app.js
 App({
   onLaunch: function () {
@@ -32,6 +33,8 @@ App({
         }
       }
     })
+
+    console.log(config.env)
   },
   globalData: {
     userInfo: null,
