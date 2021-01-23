@@ -21,7 +21,7 @@ jobs:
     - name: Change ENV
       if: ${{ github.ref == 'refs/heads/test-cd' }}
       run: |
-        sed -i "s/\'test\'/\'prod\'/g" utils/config.js
+        sed -i $"s/\'test\'/\'prod\'/g" utils/config.js
         sed -i "s/1.0.0/1.0.1/g" utils/config.js
 
     - name: Build an Deploy
