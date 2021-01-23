@@ -19,7 +19,7 @@ jobs:
         UPLOAD_PRIVATE_KEY: ${{ secrets.UPLOAD_PRIVATE_KEY }}
 
     - name: Change ENV
-      if: ${{ github.ref == 'refs/heads/test-cd' }}
+      if: ${{ github.ref == 'refs/heads/release-cd' }}
       run: |
         sed -i "s/'test'/'prod'/g" utils/config.js
 
