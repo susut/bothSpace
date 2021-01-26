@@ -19,9 +19,9 @@ req.write(JSON.stringify({
     "msgtype": "markdown",
     "markdown": {
         "content": `${publishBranch.includes('test') ? '测试号' : '正式号'}发布\n` +
-            `>发布人:<font color='comment'>${publishUser}</font>` +
-            `>发布时间:<font color='comment'>${new Date()}</font>` +
-            ">发布分支:<font color='comment'>${publishBranch.split('/')[2]}</font>"
+            `> 发布人:<font color='comment'>${publishUser}</font>` +
+            `> 发布时间:<font color='comment'>${new Date()}</font>` +
+            `> 发布分支:<font color='comment'>${publishBranch.split('/')[2]}</font>`
     }
 }))
 req.end()
