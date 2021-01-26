@@ -1,6 +1,6 @@
 const config = require('./utils/config')
 
-const ci = require('miniprogram-ci')
+const uploadCi = require('miniprogram-ci')
 
 // 从命令行获取privateKey path
 const args = process.argv.slice(2)
@@ -8,7 +8,7 @@ const privateKeyPath = args[0] && args[0].split('=')[1]
 console.log(privateKeyPath)
 if (!privateKeyPath) process.exit(1)
 
-const project = new ci.Project({
+const project = new uploadCi.Project({
     appid: config.appId,
     type: 'miniProgram',
     projectPath: './',
@@ -18,7 +18,7 @@ const project = new ci.Project({
 
 // 上传代码
 async function upload() {
-    await ci.upload({
+    await uploadCi.upload({
         project,
         version: config.version,
         desc: '',
