@@ -6,6 +6,5 @@ module.exports = {
         uat: 'https://uatdocker-miniapi.ruqimobility.com',
         prod: 'https://mini.ruqimobility.com',
     },
-    appId: 'wxf0d3053b95c4fb6c',
     version: '1.0.0'
 }

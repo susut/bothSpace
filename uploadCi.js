@@ -1,4 +1,5 @@
-const config = require('./utils/config')
+const config = require('./utils/config.js')
+const projectConfig = require('./project.config.json')
 
 const uploadCi = require('miniprogram-ci')
 
@@ -9,7 +10,7 @@ console.log(privateKeyPath)
 if (!privateKeyPath) process.exit(1)
 
 const project = new uploadCi.Project({
-    appid: config.appId,
+    appid: projectConfig.appid,
     type: 'miniProgram',
     projectPath: './',
     privateKeyPath,
@@ -21,13 +22,7 @@ async function upload() {
     await uploadCi.upload({
         project,
         version: config.version,
-        desc: '',
-        setting: {
-            es6: true,
-            es7: true,
-            minify: true,
-            autoPrefixWXSS: true
-        },
+        setting: projectConfig.setting,
         onProgressUpdate: console.log,
     })
 }
