@@ -22,7 +22,12 @@ async function upload() {
     await uploadCi.upload({
         project,
         version: config.version,
-        setting: projectConfig.setting,
+        setting: {
+            es6: true,
+            es7: true,
+            minify: true,
+            autoPrefixWXSS: true
+        },
         onProgressUpdate: console.log,
     })
 }
