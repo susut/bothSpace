@@ -43,8 +43,5 @@ Page({
       index: 1,
       text: `${cartList.length}`
     });
-  },
-  test() {
-    console.log(111)
   }
 });

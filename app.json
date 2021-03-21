@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/cart/cart"
+    "pages/mine/mine",
+    "pages/shop/cart/cart",
+    "pages/moment/moment",
+    "pages/shop/shop"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,18 +21,24 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "Index",
+        "text": "Home",
         "iconPath": "./assets/image/tab-home.png",
         "selectedIconPath": "./assets/image/tab-home-active.png"
       },
       {
-        "pagePath": "pages/cart/cart",
-        "text": "Cart",
+        "pagePath": "pages/moment/moment",
+        "text": "Time",
+        "iconPath": "./assets/image/tab-time.png",
+        "selectedIconPath": "./assets/image/tab-time-active.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "Shop",
         "iconPath": "./assets/image/tab-cart.png",
         "selectedIconPath": "./assets/image/tab-cart-active.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/mine/mine",
         "text": "Mine",
         "iconPath": "./assets/image/tab-mine.png",
         "selectedIconPath": "./assets/image/tab-mine-active.png"
