@@ -1,0 +1,29 @@
+<!--pages/index/editDay/editDay.wxml-->
+<view class="page-edit-day">
+    <view>
+        title: <input type="text" placeholder="Please enter the title ~" auto-focus />
+    </view>
+    <view>
+        desc: <textarea placeholder="Please enter some discription ~" />
+    </view>
+    <view>
+        date: <picker mode="date"></picker>
+    </view>
+    <view>
+        bgImg:
+    </view>
+    <view>
+        isTop: <switch />
+    </view>
+    <view>
+        remind:
+        <picker mode="selector" range="{{remindTimeList}}">
+            <text>time</text>
+        </picker>
+    </view>
+    <view>
+        addr
+    </view>
+
+    <button>add</button>
+</view>

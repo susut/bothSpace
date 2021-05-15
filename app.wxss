@@ -1,6 +1,6 @@
 /**app.wxss**/
 Page {
-  font-size: 28rpx;
+  background-color: #f6f6f6;
 }
 
 .container {

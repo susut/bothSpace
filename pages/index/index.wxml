@@ -1,40 +1,4 @@
 <!--index.wxml-->
 <view class="page-index-wrap">
-  <view class="search-wrap">
-    <view class="tab">Order</view>
-    <view class="search">
-      <input class="search__input" type="text" placeholder="Search" />
-    </view>
-  </view>
-
-  <view class="list-wrap">
-    <view class="category">
-      <view wx:for="{{categoryList}}"
-            wx:for-item="category"
-            wx:key="key"
-            data-index="{{index}}"
-            bind:tap="changeCategory"
-            class="category__item {{index === curCategoryIndex ? 'category__item--active' : ''}}">
-        {{category.title}}
-      </view>
-    </view>
-    <view class="goods">
-      <view class="goods__item" wx:for="{{curItemList}}" wx:key="id">
-        <view class="goods__img">
-          <image src="{{'../../assets/image/' + item.imgName}}" alt=""></image>
-        </view>
-        <view class="goods__detail">
-          <view class="goods__title">{{item.title}}</view>
-          <view class="goods__desc">{{item.desc}}</view>
-          <view class="goods__bottom">
-            <view class="goods__amount">￥{{item.amount}}</view>
-            <view class="goods__add" data-item="{{item}}" bind:tap="addToCart">+</view>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
-</view>
-<view style="position: fixed; bottom: 1rpx; width: 100%">
-  <official-account></official-account>
+  <button type="default" bindtap="editDay">add</button>
 </view>

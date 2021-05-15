@@ -4,7 +4,8 @@
     "pages/mine/mine",
     "pages/shop/cart/cart",
     "pages/moment/moment",
-    "pages/shop/shop"
+    "pages/shop/shop",
+    "pages/index/editDay/editDay"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,7 +28,7 @@
       },
       {
         "pagePath": "pages/moment/moment",
-        "text": "Time",
+        "text": "Moment",
         "iconPath": "./assets/image/tab-time.png",
         "selectedIconPath": "./assets/image/tab-time-active.png"
       },
