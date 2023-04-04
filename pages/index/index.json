@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Day",
+  "usingComponents": {
+    "modal": "/components/modal/modal"
+  }
+}

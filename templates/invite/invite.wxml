@@ -1,0 +1,10 @@
+<template name="invite">
+  <view class="tip-content">
+    <image class="img" src="/assets/image/finger-heart.png"></image>
+    <view class="right">
+      <view class="title">Share</view>
+      <view class="subtitle light">Invite your baby to join you.</view>
+    </view>
+  </view>
+  <button class="tip-btn" open-type="share">Share</button>
+</template>

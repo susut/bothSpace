@@ -1,0 +1,6 @@
+<!--pages/link/link.wxml-->
+<view>
+  <view>邀请页，UI也还木有o(╥﹏╥)o</view>
+  <view>{{invitor.nickName}} invite you to join the both space</view>
+  <button bindtap="link" wx:if="{{canConfirm}}">Confirm</button>
+</view>

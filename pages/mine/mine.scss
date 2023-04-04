@@ -1,0 +1,25 @@
+.header {
+  height: 260rpx;
+  background: linear-gradient(#fec3d2, rgba(253, 194, 194, 0.4));
+  text-align: center;
+  padding-top: 140rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .avatar {
+    border: 6rpx solid white;
+    border-radius: 50%;
+    width: 160rpx;
+    height: 160rpx;
+  }
+  .nick {
+    color: white;
+    font-size: 32rpx;
+    font-weight: bold;
+  }
+  .link {
+    width: 80rpx;
+    height: 60rpx;
+    padding: 0 20rpx 40rpx;
+  }
+}

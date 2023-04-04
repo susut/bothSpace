@@ -1,0 +1,30 @@
+.page-add-wrap {
+  padding: 50rpx 32rpx;
+}
+.card {
+  background-color: white;
+  border-radius: 28rpx;
+  padding-bottom: 20rpx;
+  .img {
+    height: 400rpx;
+    width: 100%;
+  }
+  input {
+    height: 60rpx;
+    margin: 10rpx 30rpx;
+  }
+  .title {
+    font-size: 32rpx;
+    font-weight: bold;
+  }
+  .link {
+    
+  }
+}
+.add-btn {
+  position: fixed;
+  bottom: calc(46rpx + constant(safe-area-inset-bottom));
+  bottom: calc(46rpx + env(safe-area-inset-bottom));
+  left: 32rpx;
+  width: 686rpx;
+}

@@ -1,0 +1,35 @@
+/**app.wxss**/
+Page {
+  background-color: #f6f7fb;
+  font-size: 28rpx;
+}
+
+.primary {
+  color: #fec3d2;
+}
+.secondary {
+  color: #99CCCC;
+}
+.third {
+  color: #FFCC99;
+}
+.light {
+  color: #707070;
+}
+
+.primary-btn {
+  border-radius: 50rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  color: white;
+  text-align: center;
+  background-color: #fec3d2;
+}
+.secondary-btn {
+  border-radius: 50rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  color: white;
+  text-align: center;
+  background-color: #99CCCC;
+}

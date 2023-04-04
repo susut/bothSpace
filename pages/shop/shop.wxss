@@ -1,0 +1,151 @@
+.tip-content {
+  background-color: white;
+  display: flex;
+  border-radius: 30rpx;
+  padding: 20rpx;
+}
+.tip-content .img {
+  width: 240rpx;
+  height: 240rpx;
+  margin-top: -70rpx;
+  margin-left: -20rpx;
+  flex-shrink: 0;
+}
+.tip-content .right {
+  width: 380rpx;
+  word-break: break-word;
+}
+.tip-content .title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.tip-btn {
+  margin-left: 240rpx !important;
+  width: 200rpx !important;
+  border-radius: 60rpx;
+  margin-top: 40rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+  font-weight: normal;
+}
+
+.page-shop-wrap {
+  height: 100vh;
+  position: relative;
+}
+
+.cloud {
+  padding: 20rpx 40rpx;
+}
+.cloud > image {
+  width: 120rpx;
+  height: 120rpx;
+  vertical-align: top;
+}
+.cloud .cloud2 {
+  margin-top: 60rpx;
+  margin-left: -200rpx;
+  animation: 60s movingCloud2 linear infinite;
+}
+.cloud .cloud1 {
+  height: 110rpx;
+  animation: 50s movingCloud1 linear infinite;
+}
+.cloud .cloud3 {
+  height: 150rpx;
+  animation: 60s movingCloud3 linear infinite;
+}
+
+.tree {
+  font-size: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.tree .bg {
+  width: 750rpx;
+  height: calc(100vh - 360rpx);
+}
+.tree .trunk {
+  width: 160rpx;
+  height: 120rpx;
+  border-bottom-left-radius: 32rpx;
+  border-bottom-right-radius: 32rpx;
+  background-color: #ffe4eb;
+  margin: -10rpx auto 100rpx auto;
+}
+.tree .gift {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+}
+
+.star {
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 32rpx;
+  bottom: 32rpx;
+}
+
+@keyframes movingCloud1 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(550rpx);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes movingCloud3 {
+  0% {
+    transform: translateX(420rpx);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(420rpx);
+  }
+}
+.cur-gift {
+  background-color: white;
+  border-radius: 40rpx;
+  padding: 40rpx;
+}
+.cur-gift .pic {
+  width: 100%;
+  height: 360rpx;
+}
+.cur-gift .title {
+  font-weight: bold;
+  margin: 10rpx 0;
+}
+.cur-gift .link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.cur-gift .btn-wrap {
+  display: flex;
+  margin-top: 30rpx;
+  justify-content: center;
+}
+.cur-gift .btn {
+  width: 200rpx;
+  color: white;
+  background-color: #fec3d2;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 40rpx;
+  justify-content: center;
+}
+.cur-gift .btn.del {
+  background-color: #707070;
+}

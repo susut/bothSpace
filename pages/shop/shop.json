@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Gift",
+  "usingComponents": {
+    "modal": "/components/modal/modal"
+  }
+}

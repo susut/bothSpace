@@ -1,0 +1,7 @@
+<!--components/modal/modal.wxml-->
+<view class="modal-wrap" hidden="{{hide}}" catchtouchmove="true">
+  <view class="modal__content {{hide?'hidden':''}}">
+    <slot></slot>
+  </view>
+  <view wx:if="{{showCloseBtn}}" class="modal__close" bindtap="hideFn"></view>
+</view>

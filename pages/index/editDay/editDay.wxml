@@ -1,0 +1,34 @@
+<!--pages/index/editDay/editDay.wxml-->
+<wxs src="../../../utils/filter.wxs" module="filter"></wxs>
+<view class="page-edit-day">
+    <view class="list-item">
+        <text class="label">Title: </text>
+        <input type="text" placeholder="Please enter the title ~" value="{{day.title}}" auto-focus bindblur="editTitle" />
+    </view>
+    <view  class="list-item">
+        <text class="label">Desc: </text>
+        <textarea placeholder="Please enter some discription ~" value="{{day.desc}}" bindblur="editDesc" />
+    </view>
+    <view  class="list-item flex">
+        <text class="label">Date: </text>
+        <picker mode="date" bindchange="editTheDay">{{filter.formatTime(day.theDate, 'yyyy-MM-dd')}}</picker>
+    </view>
+    <view  class="list-item flex">
+        <text class="label">Top: </text>
+        <switch checked="{{day.isTop}}" bindchange="editTop" />
+    </view>
+    <view  class="list-item flex">
+        <text class="label">Remind: </text>
+        <picker mode="selector" range="{{remindTimeList}}" value="{{remindIdx}}" bindchnage="editRemind">
+            <text>{{remindTimeList[day.remind]}}</text>
+        </picker>
+    </view>
+    <view class="btn">
+        <view wx:if="{{type == 'add'}}" class="primary-btn" bindtap="add">Add</view>
+        <block wx:if="{{type == 'view'}}">
+          <view class="primary-btn edit" bindtap="edit">Edit</view>
+          <view class="secondary-btn" bindtap="share">Share</view>
+        </block>
+        <view wx:if="{{type == 'edit'}}" class="secondary-btn edit" bindtap="alter">Confirm</view>
+    </view>
+</view>

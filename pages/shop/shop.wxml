@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<import src="../../templates/invite/invite.wxml" />
+
+<view class="page-shop-wrap">
+  <view class="cloud">
+    <image class="cloud1" src="/assets/image/cloud1.png"></image>
+    <image class="cloud3" src="/assets/image/cloud3.png"></image>
+    <image class="cloud2" src="/assets/image/cloud2.png"></image>
+  </view>
+  <view class="tree">
+    <image src="/assets/image/tree.png" class="bg"></image>
+    <view class="trunk"></view>
+    <image src="/assets/image/gift2.png" class="gift" 
+           wx:for="{{giftListMe}}" wx:key="index"
+           data-index="{{index}}"
+           data-type="Me"
+           bindtap="showGift"
+           style="left: {{giftPosition['me'][index][0]}}rpx;top: {{giftPosition['me'][index][1]}}rpx;"></image>
+    <image src="/assets/image/gift.png" class="gift"
+           wx:for="{{giftListTa}}" wx:key="index"
+           data-index="{{index}}"
+           data-type="Ta"
+           bindtap="showGift"
+           style="left: {{giftPosition['ta'][index][0]}}rpx;top: {{giftPosition['ta'][index][1]}}rpx;"></image>
+  </view>
+
+  <image class="star" src="/assets/image/star-circle.png" bindtap="add"></image>
+</view>
+
+<modal hide="{{!curGift.show}}" bindhide="hideGift">
+  <view class="cur-gift">
+    <image class="pic" mode="aspectFill" alt="图片还没做好"></image>
+    <view class="title">{{curGift.detail.title}}</view>
+    <view class="light link" bindtap="copy">{{curGift.detail.link}}</view>
+    
+    <view class="btn-wrap" wx:if="{{curGift.canSubmit}}">
+      <view class="btn" bindtap="fulfill">Fulfill</view>
+      <view class="btn del" bindtap="del">Delete</view>
+    </view>
+  </view>
+</modal>
+
+<modal hide="{{!showShareModal}}" bindhide="closeShareModal">
+  <template is="invite"></template>
+</modal>

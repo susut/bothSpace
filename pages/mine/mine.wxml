@@ -1,0 +1,16 @@
+<!--mine.wxml-->
+<view>
+  <view class="header">
+    <view>
+      <image src="{{storeView.userInfo.avatarUrl}}" class="avatar" bindtap="toLogin"></image>
+      <view class="nick" bindtap="toLogin">{{storeView.userInfo.nickName || 'Hello, 点点看'}}</view>
+    </view>
+    <block  wx:if="{{storeView.userInfo.linkId}}">
+      <image class="link" src="/assets/image/link.png"></image>
+      <view>
+        <image src="{{storeView.linkInfo.avatarUrl}}" class="avatar"></image>
+        <view class="nick">{{storeView.linkInfo.nickName || '??'}}</view>
+      </view>
+    </block>
+  </view>
+</view>

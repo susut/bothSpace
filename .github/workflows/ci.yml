@@ -1,0 +1,35 @@
+name: CD Demo
+on:
+  push:
+    branches:
+      - release-test
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Use Node
+      uses: actions/setup-node@master
+    # 使用GitHub的Secrets来存储私钥内容，然后在执行时再创建私钥文件。
+    - name: Generate provate key
+      run: echo "$UPLOAD_PRIVATE_KEY" > private.key
+      env:
+        UPLOAD_PRIVATE_KEY: ${{ secrets.UPLOAD_PRIVATE_KEY }}
+    # 发布正式版，修改环境变量
+    - name: Change ENV
+      if: ${{ github.ref == 'refs/heads/release-prod' }}
+      run: |
+        sed -i "s/'test'/'prod'/g" utils/config.js
+
+    - name: Build an Deploy
+      run: |
+        npx yarn
+        node uploadCi.js --pkp=./private.key
+
+    - name: Notice
+      env:
+        USER: ${{ github.actor }}
+        BRANCH: ${{ github.ref }}
+      run: node noticeCi.js $USER $BRANCH

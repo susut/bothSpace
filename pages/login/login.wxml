@@ -1,0 +1,4 @@
+<!--pages/login/login.wxml-->
+<view>登录页，UI还没o(╥﹏╥)o</view>
+<button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">授权登录</button>
+<button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>

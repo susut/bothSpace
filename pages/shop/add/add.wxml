@@ -1,0 +1,10 @@
+<!--pages/shop/add/add.wxml-->
+<view class="page-add-wrap">
+  <view class="card">
+    <image class="img" mode="aspectFit" src="{{imgPath}}" bindtap="selectImg"></image>
+    <input class="title" type="text" placeholder="Title" value="{{title}}" bindblur="inputTitle" />
+    <input class="link light" type="text" placeholder="Link" value="{{link}}" bindblur="inputLink" />
+  </view>
+  
+  <view class="primary-btn add-btn" bindtap="add">Add</view>
+</view>

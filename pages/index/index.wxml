@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter"></wxs>
+<import src="../../templates/invite/invite.wxml" />
+
+<view class="page-index-wrap">
+    <view class="top-wrap" data-type="view" bindtap="editDay">
+        <view class="circle">
+            <view class="circle-inner">{{topItem.count}}</view>
+        </view>
+        <view class="title">{{topItem.title}}</view>
+        <view class="date light">{{filter.formatTime(topItem.theDate, 'yyyy-MM-dd')}}</view>
+    </view>
+    
+    <view>
+        <view class="list-item" wx:for="{{list}}" wx:key="index" bindtap="editDay" data-type="view">
+            <view class="count primary">{{item.count}}</view>
+            <view class="detail">
+                <view class="title">{{item.title}}</view>
+                <view class="light date">Date: {{filter.formatTime(item.theDate, 'yyyy-MM-dd')}}</view>
+            </view>
+        </view>
+    </view>
+
+    <image class="add-btn" src="/assets/image/icon-add.png" bindtap="editDay" data-type="add"></image>
+</view>
+<modal hide="{{!showShareModal}}" bindhide="closeShareModal">
+  <template is="invite"></template>
+</modal>
