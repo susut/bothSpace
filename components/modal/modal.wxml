@@ -3,5 +3,5 @@
   <view class="modal__content {{hide?'hidden':''}}">
     <slot></slot>
   </view>
-  <view wx:if="{{showCloseBtn}}" class="modal__close" bindtap="hideFn"></view>
+  <view wx:if="{{showCloseBtn}}" class="modal__close" bindtap="hideFn">x</view>
 </view>

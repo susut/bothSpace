@@ -28,7 +28,10 @@
 .modal__close {
   width: 74rpx;
   height: 74rpx;
-  background-image: url("/lottery_icon@2x.png");
   background-size: 100% 100%;
+  font-size: 60rpx;
+  line-height: 74rpx;
   margin-top: 50rpx;
+  text-align: center;
+  color: white;
 }

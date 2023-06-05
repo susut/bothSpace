@@ -38,6 +38,20 @@ const create = (options) => {
   Page(options);
 }
 
+create.Component = function(options) {
+  options.lifetimes = options.lifetimes || {};
+  const _attached = options.attached || options.lifetimes.attached;
+  options.attached = options.lifetimes.attached = function (e) {
+    options.data = options.data || {};
+    options.data.storeView = JSON.parse(JSON.stringify(store.storeView));
+    this.setData({
+      storeView: options.data.storeView
+    });
+    _attached && _attached.call(this, e);
+  }
+  Component(options);
+}
+
 const observer = (data, type) => {
   return _proxy(data, type);
 }
